@@ -15,34 +15,34 @@ import java.awt.Dimension;
 import java.awt.TextArea;
 import javax.swing.*;
 
-public class HelloWorldSwing {
+public class GameExample1 {
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the
      * event-dispatching thread.
      */
     private static void createAndShowGUI() {
+        PlayAction playAction = new PlayAction();
+        ResetAction resetAction = new ResetAction();
+        
         //Create and set up the window.
-        JFrame frame = new JFrame("Hello OOP Spring 2026");
+        JFrame frame = new JFrame("Sample Lottery Game");
         JMenuBar menuBar = new JMenuBar();
-        JMenu menu = new JMenu("Game Menu");
-        menuBar.add(menu);
+        JMenuItem playItem = new JMenuItem();
+        playItem.setAction(playAction);
+        playItem.setText("Play Game");
+        menuBar.add(playItem);
+        JMenuItem resetItem = new JMenuItem();
+        resetItem.setAction(resetAction);
+        resetItem.setText("Reset Game");
+        menuBar.add(resetItem);
+        
         
         frame.setLocation(100,50);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setJMenuBar(menuBar);
         
-        String values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String textOut = new String();
-        
-        for(int i = 0; i < 10; i++) {
-            textOut = textOut + "Letter: " + values.charAt(i);
-            textOut = textOut + "\n";
-            textOut = textOut + "Index: " + i;
-            textOut = textOut + "\n";
-            System.out.println("Letter: " + values.charAt(i));
-            System.out.println("Index: " + i);
-        }
+        String textOut = new String("Game Text Area");
 
         //Add the ubiquitous "Hello World" label.
         JTextArea textArea = new JTextArea(textOut, 30,50);
