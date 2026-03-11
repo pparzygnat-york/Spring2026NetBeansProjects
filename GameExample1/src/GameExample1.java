@@ -22,6 +22,10 @@ public class GameExample1 {
      * event-dispatching thread.
      */
     private static void createAndShowGUI() {
+        String textOut = new String("Game Text Area");
+        JTextArea textArea = new JTextArea(textOut, 30,50);
+        textArea.setEditable(false);
+       
         PlayAction playAction = new PlayAction();
         ResetAction resetAction = new ResetAction();
         
@@ -41,12 +45,6 @@ public class GameExample1 {
         frame.setLocation(100,50);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setJMenuBar(menuBar);
-        
-        String textOut = new String("Game Text Area");
-
-        //Add the ubiquitous "Hello World" label.
-        JTextArea textArea = new JTextArea(textOut, 30,50);
-        textArea.setEditable(false);
         
         Dimension wsd = new Dimension(600, 400);
         frame.getContentPane().add(textArea);
