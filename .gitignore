@@ -1,1 +1,12 @@
 gitrun.sh
+/GameExampleWorkspace1/nbproject/private/
+/GameExampleWorkspace1/dist/
+/GameExampleWorkspace1/build/
+/CelsiusConverterProject/nbproject/private/
+/ExampleProject1/nbproject/private/
+/CelsiusConverterProject/build/
+/CelsiusConverterProject/dist/
+/LotteryGame1/nbproject/private/
+/LotteryGame1/dist/
+/LotteryGame1/build/
+.remove

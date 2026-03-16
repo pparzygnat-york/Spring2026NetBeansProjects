@@ -13,7 +13,7 @@ import javax.swing.AbstractAction;
  * @author administrator
  */
 public class ResetAction extends AbstractAction {
-   
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("Reset Action Invoked.");
