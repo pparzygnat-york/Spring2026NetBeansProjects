@@ -10,3 +10,6 @@ gitrun.sh
 /LotteryGame1/dist/
 /LotteryGame1/build/
 .remove
+/CelciusConverterLatest/nbproject/private/
+/CelciusConverterLatest/build/
+/CelciusConverterLatest/dist/
