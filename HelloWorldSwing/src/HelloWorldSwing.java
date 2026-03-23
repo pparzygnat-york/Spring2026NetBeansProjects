@@ -32,7 +32,7 @@ public class HelloWorldSwing {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setJMenuBar(menuBar);
         
-        String values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String values = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         String textOut = new String();
         
         for(int i = 0; i < 10; i++) {
