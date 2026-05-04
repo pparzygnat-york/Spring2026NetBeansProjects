@@ -63,9 +63,5 @@ public class LotteryGame1 {
             System.out.print(take5[i] + " ");
         }
         System.out.println();
-       
-        
-        
     }
-    
 }
