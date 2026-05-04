@@ -3,22 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lotterygame1;
-import java.util.Random;
+package oopsandbox;
 
 /**
  *
  * @author administrator
  */
-public class LotteryGame1 {
+public class OOPSandbox {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Lottery Game Example");
-        ClassicGame takeLottery = new ClassicGame();
-        takeLottery.playClassic(4); 
+        Widget w1 = new Widget();
+        Widget w2 = new Widget();
+        
+        w1.incrementSold(true);
+        w2.incrementSold(false);
+        
+        w1.getSold();
+        w1.getInsurance();
+        w2.getSold();
+        w2.getInsurance();
+        
     }
+    
 }
