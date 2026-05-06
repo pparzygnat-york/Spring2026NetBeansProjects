@@ -5,6 +5,9 @@
  */
 package universalinterfacegui;
 
+import java.util.Objects;
+import java.util.Observable;
+
 /**
  *
  * @author administrator
@@ -16,6 +19,18 @@ public class LotteryGameUniversalGUI extends javax.swing.JFrame {
      */
     public LotteryGameUniversalGUI() {
         initComponents();
+        System.out.println("LotteryGameUniversalGUI Initializing");
+        
+        UniversalInterfaceObserver universalOutputConsoleObserver = new UniversalInterfaceObserver(universalOutputConsole);
+        universalOutputConsole.toString();
+        UniversalInterfaceObserver specializedGameInterfacePanelObserver = new UniversalInterfaceObserver(specializedGameInterfacePanel);
+        UniversalInterfaceObserver standardButtonLeftObserver = new UniversalInterfaceObserver(standardButtonLeft);
+        UniversalInterfaceObserver standardButtonRightObserver = new UniversalInterfaceObserver(standardButtonRight);
+        Observable guiSubjectObservable = new Observable();
+        guiSubjectObservable.addObserver(universalOutputConsoleObserver);
+        guiSubjectObservable.notifyObservers();
+        
+        System.out.println("LotteryGameUniversalGUI Initialized");
     }
 
     /**
@@ -134,7 +149,7 @@ public class LotteryGameUniversalGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LotteryGameUniversalGUI().setVisible(true);
+                new LotteryGameUniversalGUI().setVisible(true); 
             }
         });
     }
@@ -146,4 +161,7 @@ public class LotteryGameUniversalGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane universalContentPane;
     private javax.swing.JTextArea universalOutputConsole;
     // End of variables declaration//GEN-END:variables
+
+
+
 }
